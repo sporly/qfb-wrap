@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下载页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes"><!--设置viewport，适应移动设备的显示宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no"><!--禁止safari电话默认拨打-->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!--隐藏safari导航栏及工具栏-->
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body >
+<!--注册成功-->
+<div class="qfb-cencer">
+    <!--头部begin-->
+    <div class="qfb-position"></div>
+    <div class="qfb-head">
+        <div class="logo-main">
+            <a href="#" class="before"></a>
+            <span class="qfb-title">下载页</span>
+        </div>
+    </div>
+    <!--头部end-->
+    <!--内容begin-->
+    <div class="mod_container">
+				<div class="load-top" id="primary">
+					<ul>
+						<li><img src="img/topimg1.png"/></li>
+						<li><img src="img/topimg2.png"/></li>
+					</ul>
+					<div class="load-box">
+
+						<div class="load-btn">
+							<a class="load iphone-load bomb-btn" href="itms-services://?action=download-manifest&amp;url=https://app.v089.com/DMWallet.plist" style="display: none;"><img src="img/iphone1.png"></a>
+							<!-- <a class="load iphone-load bomb-btn" href="https://itunes.apple.com/cn/app/qian-fu-bao/id1048520193?mt=8"><img src="/img/iphone1.png"></a> -->
+							<a class="load android-load abomb-btn" href="http://qfb.v089.com/download/android/QianFuBao_Android.apk" style="display: none;"><img src="img/android1.png"></a>
+						</div>
+						<li><img src="img/topimg3.png"/></li>
+					</div>
+				</div>
+				<div class="load-contentp">
+					<ul class="in-main">
+						<li><img src="img/img1.png"></li>
+						<li><img src="img/img2.png"></li>
+						<li><img src="img/img3.png"></li>
+						<li><img src="img/img4.png"></li>
+						<li><img src="img/img5.png"></li>
+						<li><img src="img/img6.png"></li>
+						<li><img src="img/img7.png"></li>
+					</ul>
+				</div>
+				
+            <div class="foorter-rightcopy">
+		        Copyright©2013-2015 qianfb.com All Rights Reserved<br/>钱富宝版权所有
+		    </div>
+				<div class="service-pos"><a href="tel:400-607-1818"><i></i>客服电话<!--<span class="callme">400-607-1818</span>--></a></div>
+			</div>
+	
+		   <!--/*弹框 安卓 begin*/-->
+			<div class="bomb-wrap" style="display: none;">
+				<div class="bomb-box">
+					<div class="bombbg"></div>
+					<div class="bombimg">
+						<img src="img/regist-bomb.png" />
+					</div>
+				</div>
+			</div>
+			<!--/*弹框 end*/-->
+			<!--/*弹框 安卓 begin*/-->
+			<div class="abomb-wrap" style="display: none;">
+				<div class="bomb-box">
+					<div class="bombbg"></div>
+					<div class="bombimg">
+						<img src="img/appanzdor.png" />
+					</div>
+				</div>
+			</div>
+			<!--/*弹框 end*/-->
+    </div>
+	
+</body>
+	<script type="text/javascript">
+		/*$(document).ready(function(){
+			$(".iphone-load").bind({
+				mouseover:function(){$(".iphone-load img").attr("src","img/iphone2.png");},
+				mouseout:function(){$(".iphone-load img").attr("src","img/iphone1.png");}
+			});
+			$(".android-load").bind({
+				mouseover:function(){$(".android-load img").attr("src","img/android2.png");},
+				mouseout:function(){$(".android-load img").attr("src","img/android1.png");}
+			});
+		});*/
+		/*弹框遮罩S*/
+		$(function(){
+			//手机平台
+			var platform = getPlatform();
+			//是否在appstore上线
+			var isAlreadyInAppstore = false;
+			//是否在android应用市场上线
+			var isAlreadyInAndroidMarket = true;
+
+			if(platform == "ios"){
+				//显示IOS下载图标
+				$(".iphone-load").show();
+				$('.bomb-btn').click(function(){
+					//如果已经在appstore上线，直接到appstore
+					if(isAlreadyInAppstore){
+						location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=cn.d188.qfbao";
+						return false;
+					}else{
+						if(isSafari()){
+							//判断版本，如果是ios9或以上，跳转到设置页面,下载，同时打开设置
+							if(getIosVersion()>=9){
+								location.href = "seting.html";
+							}
+						}else{
+							$('.bomb-wrap').show();
+							$('body').addClass('bomb-fiexd');
+							return false;
+						}
+					}
+				});
+
+				//点击遮罩层，遮罩层消失
+				$('.bomb-wrap').click(function(){
+					$('.bomb-wrap').hide();
+					$('body').removeClass('bomb-fiexd');
+				});
+
+				/*弹框遮罩E*/
+				$(window).each(function(){
+					if ($(this).width() > 1600){
+						$('.service-pos').hide();
+					}
+				});
+			}else if(platform == "android"){
+				//显示android下载图标
+				$(".android-load").show();
+				$('.abomb-btn').click(function(){
+					//如果已经在android市场上线
+					if(isAlreadyInAndroidMarket){
+						location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=cn.d188.qfbao";
+						return false;
+					}else{
+						//微信浏览器提示用系统浏览器打开，其它的不管它
+						if(isWeixn()){
+							$('.abomb-wrap').show();
+							$('body').addClass('bomb-fiexd');
+							return false;
+						}
+					}
+				});
+
+				//点击遮罩层，遮罩层消失
+				$('.bomb-wrap').click(function(){
+					$('.bomb-wrap').hide();
+					$('body').removeClass('bomb-fiexd');
+				});
+
+				/*弹框遮罩E*/
+				$(window).each(function(){
+					if ($(this).width() > 1600){
+						$('.service-pos').hide();
+					}
+				});
+			}
+		})
+
+
+		/**
+		 * 判断机型
+		 */
+		 function getPlatform(){
+			var platform;
+			var u = navigator.userAgent;
+			if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+				platform = "android"; //安卓手机
+			}else if(u.indexOf('iPhone') > -1){
+				platform = "ios"; //苹果手机
+			}else{
+				platform = "other"; //其它平台暂不处理
+			}
+			return platform;
+		 }
+
+		/**
+		 * 判断是不是微信浏览器
+		 */
+		function isWeixn(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		/**
+		 * 获取ios版本号
+		 */
+		function getIosVersion()
+		{
+			var agent = navigator.userAgent.toLowerCase();
+			var version = 8;
+			if(agent.indexOf("like mac os x") > 0){
+				//ios
+				var regStr_saf = /os [\d._]*/gi ;
+				var verinfo = agent.match(regStr_saf) ;
+				version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
+			}
+
+			var version_str = version+"";
+			if(version_str != "undefined" && version_str.length >0){
+				version=version.substring(0,1);
+			}
+			return parseInt(version);
+		}
+
+		/**
+		 * 判断是不是safari浏览器
+		 */
+		function isSafari()
+		{
+			var browserName = navigator.userAgent.toLowerCase();
+			return /webkit/i.test(browserName) && /safari/i.test(browserName) &&  !(/chrome/i.test(browserName));
+		}
+
+ //获取当前界面内容高度
+			    function setHeight() {
+			        var max_height = document.documentElement.clientHeight;
+			        var primary = document.getElementById('primary');
+			        primary.style.minHeight = max_height + "px";
+			        /*primary.style.maxHeight = max_height + "px";*/
+			
+			    };
+			    
+new function() {
+	var _self = this;
+	_self.width = 640; //设置默认最大宽度
+	_self.fontSize = 100; //默认字体大小
+	_self.widthProportion = function() {
+		var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+		return p > 1 ? 1 : p < 0.5 ? 0.5 : p;
+	};
+	_self.changePage = function() {
+		document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+	}
+	_self.changePage();
+	window.addEventListener('resize', function() {
+		_self.changePage();
+	}, false);
+};
+	</script>
+</html>

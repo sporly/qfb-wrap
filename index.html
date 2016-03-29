@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes"><!--设置viewport，适应移动设备的显示宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no"><!--禁止safari电话默认拨打-->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!--隐藏safari导航栏及工具栏-->
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="js/hhSwipe.js" ></script>
+</head>
+<body>
+<!--首页-->
+<div class="qfb-cencer" id="primary">
+    <!--头部begin-->
+    <div class="qfb-position"></div>
+    <div class="qfb-head">
+        <div class="logo-main logo-mainp clearfix">
+            <a href="javascript:;" class="logo fl"></a>
+				<div class="make-wrap"style="">
+		               <strong>预期收益12%</strong>
+		               <br>会赚钱的钱包
+		        </div>
+            <div class="qfb-btn-box qfb-btn-boxp">
+                <a href="load.html" class="qfb-btn-btn">
+                   <img src="	img/down.gif">下载APP
+                </a>
+            </div>
+        </div>
+        </div>
+    <!--头部end-->
+    <!--内容begin-->
+    <div class="qfb-content">
+        <!-- banner-->
+        <div class="addWrap">
+			<div class="swipe" id="mySwipe">
+				<div class="swipe-wrap">
+					<div><a href="javascript:;"><img class="img-responsive" src="img/banner.png"/></a></div>
+					<div><a href="javascript:;"><img class="img-responsive" src="img/banner2.jpg" /></a></div>
+				</div>
+			</div>
+
+			<ul id="position">
+				<li class="cur"></li>
+				<li></li>	
+			</ul>
+		</div>
+        <form class="content-form" id="content-form">
+            <div class="input-wrap">
+                <div class="input-box">
+
+                    <div class="input-inbox">
+                        <label class="txt">手机号</label>
+                        <input class="mobile" onblur="testMobile()" id="mobile" type="text" placeholder="输入注册手机号"></div>
+                </div>
+
+            </div>
+            <div class="input-wrap">
+                <div class="input-box1">
+                    <div class="input-inbox input-border">
+                    <input class="verify" onblur="testVerify()" id="verify" type="text" placeholder="验证码"></div>
+                    <button type="button" class="qfb-button">获取验证码</button>
+                </div>
+            </div>
+            <div class="input-wrap">
+                <div class="input-box">
+
+                    <div class="input-inbox">
+                        <label class="txt">登录密码</label>
+                        <input class="password" onblur="testPassword()" id="password" type="password" placeholder="请设置登录密码（6-16位字符）"></div>
+
+                </div>
+            </div>
+            <div class="input-wrap">
+                <div class="input-box">
+                    <div class="input-inbox">
+                        <label class="txt">推荐人手机号</label>
+                        <input class="r_mobile" onblur="testPassword()" id="r_mobile" type="text" placeholder="推荐人手机号（必填）"></div>
+                </div>
+            </div>
+            <div class="service"><input type="checkbox" class="check" ><i></i>同意<span><a href="service_agreement.html" style="color:#0078ff">《钱富宝服务协议》</a></span></div>
+            <div class="share-btn">
+                <button id="submit" type="button">免费注册</button>
+            </div>
+        </form>
+
+    <div class="icontent-bottom">
+        <img src="img/index1.png">
+        <img src="img/index2.png">
+        <img src="img/index3.png">
+    </div>
+    </div>
+    <!--内容end-->
+    <!--底部begin-->
+    <div class="qfb-footer">
+        <div class="qfb-footerbox">
+            <ul class="btncl">
+                <li><a href="#content-form"><span class="qfb-imenu">注册</span></a></li>
+
+                <li>
+                	<!--<a href=""><span class="qfb-imenu">客户端</span></a>-->
+                	<a class="iphone-load bomb-btn" href="itms-services://?action=download-manifest&amp;url=https://app.v089.com/DMWallet.plist" style="display: none;"><span>客户端</span></a>
+		            <a class="android-load abomb-btn" href="http://qfb.v089.com/download/android/QianFuBao_Android.apk" style="display: none;"><span class="qfb-imenu">客户端</span></a>
+                </li>
+            </ul>
+            <p class="qfb-copyright1">Copyright©2013-2015 qianfb.com All Rights Reserved<br/>钱富宝版权所有</p>
+</div>
+        <div class="fqfb-position"></div>
+        <div class="qfb-ifooter-bottom	">
+            <ul>
+                <li><a href="tel:400-607-1818">
+                    <span class="qfb-imenu-icon menu-btn1"></span>
+                    <span class="qfb-itext">客服电话</span>
+                </a></li>
+                <li><a href="common_problems.html">
+                    <span class="qfb-imenu-icon menu-btn2"></span>
+                    <span class="qfb-itext">常见问题</span></a></li>
+                <li><a href="contact_us.html">
+                    <span class="qfb-imenu-icon menu-btn3"></span>
+                    <span class="qfb-itext">联系我们</span></a></li>
+                <li><a href="ems-cnpl.html">
+                    <span class="qfb-imenu-icon menu-btn4"></span>
+                    <span class="qfb-itext">公众号</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--底部end-->
+    </div>
+   <!--弹框 S-->
+<div class="bomb-wrap" style="display: none;">
+	<div class="bomb-box">
+		<div class="bombbg"></div>
+		<div class="bombimg">
+			<img src="/img/regist-bomb.png" />
+		</div>
+	</div>
+</div>
+
+<!--/*弹框 安卓 begin*/-->
+<div class="abomb-wrap" style="display:none;">
+	<div class="bomb-box">
+		<div class="bombbg"></div>
+		<div class="bombimg">
+			<img src="/img/appanzdor.png" />
+		</div>
+	</div>
+</div>
+<div class="bbomb-wrap" style="display: none;">
+	<div class="bomb-box">
+		<div class="bombbg"></div>
+		<div class="bombimg">
+			<img src="/img/shareimg.png" />
+		</div>
+	</div>
+</div>
+<!--/*弹框 end*/-->
+<!--弹框 E-->
+    <script type="text/javascript">
+
+		//轮播
+		var bullets = document.getElementById('position').getElementsByTagName('li');
+		var banner = Swipe(document.getElementById('mySwipe'), {
+			auto: 4000,
+			continuous: true,
+			disableScroll:false,
+			callback: function(pos) {
+				var iw = bullets.length;
+				var i = bullets.length;
+				while (i--) {
+					bullets[i].className = ' ';
+				}
+				bullets[pos%iw].className = 'cur';
+			}
+		})
+	  $(function(){
+	  	$('.service i').click(function(){
+	  		$(this).toggleClass('nocheck');
+	  	});
+	  	
+	  	$('.input-wrap input').click(function(){
+	  		$(this).addClass('blue-bd');
+	  		$(this).parents('.input-wrap').siblings().find('input').removeClass('blue-bd');
+	  	});
+	  })
+	    
+		
+		$(function(){
+			//手机平台
+			var platform = getPlatform();
+			//是否在appstore上线
+			var isAlreadyInAppstore = false;
+			//是否在android应用市场上线
+			var isAlreadyInAndroidMarket = false;
+
+			if(platform == "ios"){
+				//显示IOS下载图标
+				$(".iphone-load").show();
+				$('.bomb-btn').click(function(){
+					//如果已经在appstore上线，直接到appstore
+					if(isAlreadyInAppstore){
+						location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=cn.d188.qfbao";
+						return false;
+					}else{
+						if(isSafari()){
+							//判断版本，如果是ios9或以上，跳转到设置页面,下载，同时打开设置
+							if(getIosVersion()>=9){
+								location.href = "setting.html";
+							}
+						}else{
+							$('.bomb-wrap').show();
+							$('body').addClass('bomb-fiexd');
+							return false;
+						}
+					}
+				});
+
+				//点击遮罩层，遮罩层消失
+				$('.bomb-wrap').click(function(){
+					$('.bomb-wrap').hide();
+					$('body').removeClass('bomb-fiexd');
+				});
+
+			
+			}else if(platform == "android"){
+				//显示android下载图标
+				$(".android-load").show();
+				$('.abomb-btn').click(function(){
+					//如果已经在android市场上线
+					if(isAlreadyInAndroidMarket){
+						location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=cn.d188.qfbao";
+						return false;
+					}else{
+						//微信浏览器提示用系统浏览器打开，其它的不管它
+						if(isWeixn()){
+							$('.abomb-wrap').show();
+							$('body').addClass('bomb-fiexd');
+							return false;
+						}
+					}
+				});
+
+				//点击遮罩层，遮罩层消失
+				$('.bomb-wrap').click(function(){
+					$('.bomb-wrap').hide();
+					$('body').removeClass('bomb-fiexd');
+				});
+				$('.abomb-wrap').click(function(){
+					$('.abomb-wrap').hide();
+					$('body').removeClass('bomb-fiexd');
+				});
+
+				/*弹框遮罩E*/
+				$(window).each(function(){
+					if ($(this).width() > 1600){
+						$('.service-pos').hide();
+					}
+				});
+			}
+		})
+
+
+		/**
+		 * 判断机型
+		 */
+		 function getPlatform(){
+			var platform;
+			var u = navigator.userAgent;
+			if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+				platform = "android"; //安卓手机
+			}else if(u.indexOf('iPhone') > -1){
+				platform = "ios"; //苹果手机
+			}else{
+				platform = "other"; //其它平台暂不处理
+			}
+			return platform;
+		 }
+
+		/**
+		 * 判断是不是微信浏览器
+		 */
+		function isWeixn(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		/**
+		 * 获取ios版本号
+		 */
+		function getIosVersion()
+		{
+			var agent = navigator.userAgent.toLowerCase();
+			var version = 8;
+			if(agent.indexOf("like mac os x") > 0){
+				//ios
+				var regStr_saf = /os [\d._]*/gi ;
+				var verinfo = agent.match(regStr_saf) ;
+				version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
+			}
+
+			var version_str = version+"";
+			if(version_str != "undefined" && version_str.length >0){
+				version=version.substring(0,1);
+			}
+			return parseInt(version);
+		}
+
+		/**
+		 * 判断是不是safari浏览器
+		 */
+		function isSafari()
+		{
+			var browserName = navigator.userAgent.toLowerCase();
+			return /webkit/i.test(browserName) && /safari/i.test(browserName) &&  !(/chrome/i.test(browserName));
+		}
+   $(function(){
+	  	$('.bomb-btnp').click(function(){
+	  		$('.bbomb-wrap').show();
+	  		
+	  	});
+	  	$('.bbomb-wrap').click(function(){
+	  		$('.bbomb-wrap').hide();
+	  		
+	  	});
+    })
+  
+		
+	
+	 function setHeight() {
+	        var max_height = document.documentElement.clientHeight;
+	        var primary = document.getElementById('primary');
+	        primary.style.minHeight = max_height + "px";
+	        /*primary.style.maxHeight = max_height + "px";*/
+	
+	    };
+	    
+	    $('.btncl a').click(function(){
+	    	$('.btncl a').find('span').removeClass('qfb-imenu');
+	    	$(this).find('span').addClass('qfb-imenu');
+	    });
+	</script>
+
+</body>
+</html>

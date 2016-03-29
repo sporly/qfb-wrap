@@ -1,0 +1,74 @@
+body{
+    width:100%;
+    margin:0;
+    padding:0;
+    background: #f0f0f0;
+    font-family: Microsoft YaHei, Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;
+}
+body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,a,img{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+    color: #333;
+    font-size:14px;
+    border:none;
+}
+.clearfix:after{display:block;content:".";height:0;visibility:hidden;clear:both;font-size:0;line-height:0;}
+.clearfix{*zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+
+.qfb-cencer{
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto;
+    color:#333;
+}
+
+.qfb-head{
+	position: fixed;
+	top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    z-index:9;
+    border-bottom: 1px #e6e6e6 solid;
+}
+.logo-main a{
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.qfb-content{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.qfb-footer{
+    width: 100%;
+    height: auto;
+}
+.qfb-ifooter-bottom{
+	width:100%;
+	position: fixed;
+	bottom: 0;
+	left:0;	
+}
+/*顶部站位 S*/
+.qfb-position{
+	height: 54px;
+	background: #fff;
+}
+/*顶部站位 E*/
+
+/*底部站位 S*/
+.fqfb-position{
+	width: 100%;
+	height: 0.8rem;
+	background: #fff;
+}
+/*底部站位 E*/
